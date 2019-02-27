@@ -1,2 +1,2 @@
-# Common-Resources
-Common-Resources
+# Useful scripts
+Useful scripts
