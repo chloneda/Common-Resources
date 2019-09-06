@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#DIR=$(cd $(dirname $0) && pwd)
+
+export DIR=`dirname $0`
+
 BASE_SERVER=192.168.1.11
 
 yum install -y wget
