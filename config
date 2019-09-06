@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "${BASE_DIR}" == "" ];then
+  export BASE_DIR=/opt/tools
+fi
+
+[ ! -d ${BASE_DIR}  ]  &&  return 1
+
+# 指定环境变量
+#-------- JDK -----------
+java_dir=$BASE_DIR/jdk
+
+[ -d ${java_dir} ] && export JAVA_HOME=$BASE_DIR/jdk &&  export PATH=$JAVA_HOME/bin:$PATH
