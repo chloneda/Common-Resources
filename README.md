@@ -2,7 +2,7 @@
 简介
 
 ## 目录
-- [Shell脚本代码规范](https://github.com/chloneda/shell/blob/master/common/Shell脚本代码规范.md)：Shell脚本代码规范文档，用于规范脚本代码，提高代码质量。
+- [Shell脚本代码规范](https://github.com/chloneda/shell/blob/master/markdown/Shell脚本代码规范.md)：Shell脚本代码规范文档，用于规范脚本代码，提高代码质量。
 
 - [common](https://github.com/chloneda/shell/tree/master/common)：主要包含一些基本的脚本，比如安装JDK脚本等。
 
