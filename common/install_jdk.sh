@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-#DIR=$(cd $(dirname $0) && pwd)
+# DIR=$(cd $(dirname $0) && pwd)
 
 export DIR=`dirname $0`
 

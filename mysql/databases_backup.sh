@@ -1,7 +1,10 @@
 #!/bin/bash
 #=====================================
-# Author chloneda@gmail.com
-# 说明：全量备份脚本
+# FileName:    databases_backup.sh
+# Revision:    1.0
+# Email:       chloneda@gmail.com
+# Website:     https://chloneda.github.io/
+# 说明：        全量备份脚本
 # 功能：
 #   1.自动压缩备份mysql数据库
 #   2.自动删除近10天前的备份文件
@@ -13,7 +16,6 @@ BACKUP_FOLDERNAME="database_backup"  # 数据库备份文件的主目录
 DB_HOST="localhost"                  # mysql所在主机的主机名
 DB_USERNAME="root"                   # mysql登录用户名
 DB_PASSWORD="123456"                 # mysql登录密码
-DATE=`date +%Y-%m-%d-%H%M`
 LOG_FILE="/tmp/$0.log"
 DATABASES=(
 "openfire"

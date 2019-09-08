@@ -1,31 +1,31 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-function check_file_exist {
-  if [ ! -f $1 ];then
+function check_file_exist() {
+  if [ ! -f "$1" ];then
     echo "File $1 does not exists..."
     exit 1
   fi
 }
 
-function check_file_exec {
-  check_file_exist $1;
-  if [ ! -e $1 ];then
+function check_file_exec() {
+  check_file_exist "$1";
+  if [ ! -e "$1" ];then
     echo "File $1 is not executable..."
     exit 1
   fi
 }
 
-function check_dir_exist {
-  if [ ! -d $1 ];then
+function check_dir_exist() {
+  if [ ! -d "$1" ];then
     echo "Directory $1 does not exists..."
     exit 1
   fi
 }
 
-function check_var_exist {
+function check_var_exist() {
   res=`eval echo '$'"$1"`
   if [  "$res" == ""  ];then
-    echo "Environment variable "$1" does not exists..."
+    echo "Environment variable '$1' does not exists..."
     exit 1
   fi
 }
