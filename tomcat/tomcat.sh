@@ -5,11 +5,11 @@
 # Revision:    1.0
 # Email:       chloneda@gmail.com
 # Website:     https://chloneda.github.io/
-# 说明：        tomcat启动、停止、重启、查看进程状态和日志的脚本
+# 说明：        Tomcat 启动、停止、重启、查看进程状态和日志的脚本
 # 使用方法：
-#   1、修改java路径：  JAVA_HOME
-#   2、修改Tomcat路径： CATALINA_HOME
-#   3、启动Tomcat：./tomcat.sh start
+#   1、修改java路径：   JAVA_HOME=xxx
+#   2、修改Tomcat路径： CATALINA_HOME=xxx
+#   3、启动Tomcat：    ./tomcat.sh start
 # -------------------------------------------------------------------------------
 
 export JAVA_HOME=/opt/tools/jdk1.8.0_151/
