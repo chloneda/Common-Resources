@@ -15,12 +15,13 @@
 export JAVA_HOME=/opt/tools/jdk1.8.0_151/
 export PATH=$JAVA_HOME/bin:$PATH
 
+CATALINA_HOME=/opt/tools/tomcat
+
 # TOMCAT_USER is the default user of tomcat
 TOMCAT_USER=root
 SHUTDOWN_WAIT=20
-CATALINA_HOME=/opt/tools/tomcat
 
-TOMCAT_USAGE="Usage: $0 {start|stop|status|restart}"
+TOMCAT_USAGE="Usage: $0 start|stop|restart|status||log"
 function help() {
   echo "$TOMCAT_USAGE"
 }
@@ -100,6 +101,10 @@ function restart() {
     status
 }
 
+function log(){
+    tail -f $CATALINA_HOME/logs/catalina.out -n 500
+}
+
 case $1 in
   start)
     start
@@ -109,6 +114,9 @@ case $1 in
     ;;
   restart)
     restart
+    ;;
+  log)
+    log
     ;;
   status)
     status
