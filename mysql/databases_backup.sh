@@ -1,5 +1,6 @@
-#!/bin/bash
-#=====================================
+#!/usr/bin/env bash
+
+# -------------------------------------------------------------------------------
 # FileName:    databases_backup.sh
 # Revision:    1.0
 # Email:       chloneda@gmail.com
@@ -9,7 +10,7 @@
 #   1.自动压缩备份mysql数据库
 #   2.自动删除近10天前的备份文件
 #   3.删除时显示删除进度（可选）
-#=====================================
+# -------------------------------------------------------------------------------
 
 MAXIMUM_BACKUP_FILES=10              # 最大备份文件数
 BACKUP_FOLDERNAME="database_backup"  # 数据库备份文件的主目录
@@ -37,12 +38,12 @@ echo "[+] ${count} databases will be backuped..."
 
 # 循环这个数据库名称列表然后逐个备份这些数据库
 for DATABASE in ${DATABASES[@]};do
-    echo "[+] Mysql-Dumping: ${DATABASE}"
+    echo "[+] Mysql-dumping: ${DATABASE}"
     echo -n "  Began:  ";echo $(date)
     if $(mysqldump -h ${DB_HOST} -u${DB_USERNAME} -p${DB_PASSWORD} ${DATABASE} > "${BACKUP_FOLDER}/${DATABASE}.sql");then
-        echo "  Dumped successfully!"
+        echo "  Dumped database ${DATABASE} successfully!"
     else
-        echo "  Failed dumping this database!"
+        echo "  Failed dumping ${DATABASE} database!"
     fi
         echo -n "   Finished: ";echo $(date)
 done
@@ -56,6 +57,7 @@ BACKUP_FILES_MADE=$(( $BACKUP_FILES_MADE - 0 ))
 
 echo
 echo "[+] There are ${BACKUP_FILES_MADE} backup files actually."
+
 # 判断如果已经完成的备份文件数比最大备份文件数要大，那么用已经备份的文件数减去最大备份文件数,打印要删除旧的备份文件
 if [ $BACKUP_FILES_MADE -gt $MAXIMUM_BACKUP_FILES ];then
     REMOVE_FILES=$(( $BACKUP_FILES_MADE - $MAXIMUM_BACKUP_FILES ))
@@ -69,6 +71,7 @@ if [ ! -d $FOLDER_SAFETY ]
 then mkdir $FOLDER_SAFETY
 
 fi
+
 for FILE in ${SAFE_BACKUP_FILES[@]};do
     mv -i  ${FILE}  ${FOLDER_SAFETY}
 done

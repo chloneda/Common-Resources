@@ -11,7 +11,7 @@
 
 - [mysql](https://github.com/chloneda/shell/tree/master/mysql)：该目录主要是MySql的备份数据库脚本。
 
-## 安装
+## 下载
 
 通过git命令下载脚本文件至自定义目录：
 ```
@@ -20,7 +20,10 @@ git clone git@github.com:chloneda/shell.git
 
 ## 用法
 
-1、下载代码后，给文件加可执行权限：chmod -R +x shell/
+1、下载代码后，给文件加可执行权限：
+```
+chmod -R +x shell
+```
 
 2、执行 **deploy.sh** 脚本用于初始化基本环境，具体安装哪些软件可以自主修改！
 ```
