@@ -3,6 +3,8 @@
 这些脚本是我初始化基本Linux环境，或者在使用过程中，或是日常运维期间总结出来的脚本，在此乐意分享出来供大家学习。希望可以给大家带来帮助，如有错误欢迎批评指正。
 
 ## 目录
+相关目录简要说明：
+
 - [Shell脚本代码规范](https://github.com/chloneda/shell/blob/master/markdown/Shell脚本代码规范.md)：Shell脚本代码规范文档，用于规范脚本代码，提高代码质量。
 
 - [common](https://github.com/chloneda/shell/tree/master/common)：主要包含一些基本的脚本，比如安装JDK脚本等。
@@ -12,6 +14,10 @@
 - [mysql](https://github.com/chloneda/shell/tree/master/mysql)：该目录主要是MySql的备份数据库脚本。
 
 - [tomcat](https://github.com/chloneda/shell/tree/master/tomcat)：该目录主要是tomcat的脚本。
+
+## 目录导航
+
+- [脚本说明目录导航](https://github.com/chloneda/shell/blob/master/markdown/%E7%9B%AE%E5%BD%95%E5%AF%BC%E8%88%AA.md)
 
 ## 下载
 
