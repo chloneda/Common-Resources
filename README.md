@@ -11,6 +11,8 @@
 
 - [mysql](https://github.com/chloneda/shell/tree/master/mysql)：该目录主要是MySql的备份数据库脚本。
 
+- [tomcat](https://github.com/chloneda/shell/tree/master/tomcat)：该目录主要是tomcat的脚本。
+
 ## 下载
 
 通过git命令下载脚本文件至自定义目录：
