@@ -16,7 +16,6 @@ export JAVA_HOME=/opt/tools/jdk1.8.0_151/
 export PATH=$JAVA_HOME/bin:$PATH
 
 CATALINA_HOME=/opt/tools/tomcat
-
 # TOMCAT_USER is the default user of tomcat
 TOMCAT_USER=root
 SHUTDOWN_WAIT=20
@@ -92,17 +91,18 @@ function restart() {
     echo -e "Stoping tomcat!"
     kill -9 $pid
   fi
+
   echo -e "Starting tomcat!"
-    if [ `user_exists $TOMCAT_USER` = "1" ]; then
-      su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
-    else
-      $CATALINA_HOME/bin/startup.sh
-    fi
-    status
+  if [ `user_exists $TOMCAT_USER` = "1" ]; then
+    su $TOMCAT_USER -c $CATALINA_HOME/bin/startup.sh
+  else
+    $CATALINA_HOME/bin/startup.sh
+  fi
+  status
 }
 
 function log(){
-    tail -f $CATALINA_HOME/logs/catalina.out -n 500
+  tail -f $CATALINA_HOME/logs/catalina.out -n 500
 }
 
 case $1 in
