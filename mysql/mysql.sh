@@ -16,6 +16,7 @@
 # -------------------------------------------------------------------------------
 
 DIR=$(cd $(dirname $0) && pwd)
+echo "${DIR}"
 
 # chkconfig: 35 80 15
 # description: mysql daemon
@@ -25,7 +26,7 @@ DIR=$(cd $(dirname $0) && pwd)
 
 NAME=mysql
 BASE_DIR=/opt/tools
-MYSQL_HOME=$BASE_DIR/$NAME
+MYSQL_HOME=${BASE_DIR}/$NAME
 DATA_DIR=${MYSQL_HOME}/data
 CONF_FILE=${MYSQL_HOME}/my.cnf
 
@@ -58,12 +59,12 @@ function stop() {
           if [ $REVAL == 1 ];then
             break
           else
-            echo "Waiting mysql stop"
+            echo "Waiting mysql to stop"
             sleep 3
           fi
       done
   else
-    echo "mysql already stop"
+    echo "MySql already stop"
   fi
 }
 
@@ -71,10 +72,10 @@ function status() {
   netstat -nltp | grep mysql
   REVAL=$?
   if [ $REVAL == 0 ];then
-    echo "mysql is running"
+    echo "MySql is running"
     return 0
   else
-    echo "mysql is not running"
+    echo "MySql is not running"
     return 1
   fi
 }

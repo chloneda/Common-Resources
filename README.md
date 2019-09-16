@@ -15,6 +15,8 @@
 
 - [tomcat](https://github.com/chloneda/shell/tree/master/tomcat)：该目录主要是tomcat的脚本。
 
+- [hexo](https://github.com/chloneda/shell/tree/master/hexo)：该目录是hexo博客一键部署的脚本。
+
 ## 目录导航
 
 - [脚本说明目录导航](https://github.com/chloneda/shell/blob/master/markdown/%E7%9B%AE%E5%BD%95%E5%AF%BC%E8%88%AA.md)
